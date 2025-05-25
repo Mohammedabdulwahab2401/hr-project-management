@@ -1,72 +1,47 @@
-# 🧠 Open-Source HR & Project Management Tool
+📌 Overview
+An open-source solution designed to streamline HR and project management tasks, including attendance tracking, task assignment, calendar integration, and AI-generated summaries.
 
-📅 **Prototype 
+🚀 Features
+Authentication: Secure login system using Supabase.
+Attendance Management: Check-in/out functionality with GPS support.
+Task Management: Create, assign, and track tasks.
+Calendar Integration: Sync tasks with Google Calendar.
+AI Summaries: Generate summaries of attendance and tasks using Google Gemini AI.
+Meeting Scheduling: Organize meetings with participants, date, and time.
+Admin Dashboard: Monitor attendance, approve leave requests, and view reports.
+Employee Dashboard: Submit leave requests, view announcements, and manage tasks.
 
----
+⚙️ Tech Stack
+Frontend: React.js with Vite
+Backend: Node.js with Express
+Database: Supabase (PostgreSQL)
+Authentication: Supabase Auth
+AI Integration: Google Gemini AI
+Calendar Integration: Google Calendar API
 
-## 🚀 System Setup & Usage Guide
-
-### ⚛️ Frontend Setup (React.js / Vite)
-
-```bash
+🛠️ Installation Guide
+Frontend Setup
 npx create-react-app hrm-tool
 cd hrm-tool
 npm install @supabase/supabase-js @supabase/auth-ui-react react-router-dom
-'''Backend Setup (Node.js + Express)
-bash
-Copy
-Edit
+
+Backend Setup
+mkdir backend
+cd backend
 npm init -y
-npm install express cors dotenv supabase-js googleapis
+npm install express cors dotenv @supabase/supabase-js googleapis
 
-🧪 API Documentation
-Base URL: /api
-
-🔐 Auth
-POST /auth/login
-Body: { email: string }
-Returns: Supabase login URL or token
-
-👤 Attendance
-POST /attendance/check-in
-POST /attendance/check-out
-GET /attendance/:user_id
-
-📝 Tasks
-POST /tasks
-GET /tasks/:user_id
-PUT /tasks/:task_id
-
-📆 Calendar Integration
-POST /calendar/sync
-
-Adds a task to Google Calendar
-
-🤖 AI Summary
-POST /summary
-
-Input: user_id, date range
-Output: AI-generated summary of attendance & tasks
-
-📅 Meetings
-POST /meetings
-Body: participants, date, time
-
-👥 User Guide
-👑 Admin Features
+👥 User Roles
+Admin
 Monitor Attendance
 Assign & Track Tasks
 Approve Leave Requests
 View AI Summary Reports
 
-🧑‍💼 Employee Features
+Employee
 Check-in/out via GPS
 Task Dashboard
 Submit Leave Requests
 View Announcements
 
-🤖 AI Chatbot Assistant (Gemini)
-Generate summaries using Google Gemini AI
-Integrated with attendance and task data
-
-
+Integrated with Google Gemini AI to generate summaries using attendance and task data.
